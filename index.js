@@ -15,6 +15,7 @@ massive(CONNECTION_STRING).then(dbInstance => {
 
 app.get('/api/properties', controller.getProperties)
 app.post('/api/properties', controller.addProperty)
+app.delete('/api/properties/:id', controller.deleteProperty)
 
 
 let port = SERVER_PORT || 3710

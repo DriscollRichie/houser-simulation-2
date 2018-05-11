@@ -22,7 +22,7 @@ export default function House(props) {
       <span>ZIP Code</span>
       <h2>{props.propertyData.zip}</h2>
       <br/>
-      <button>Delete Property</button>
+      <button onClick={() => props.deletePropertyFn(props.propertyData.id)}>Delete Property</button>
       <br/>
       <br/>
       <br/>

@@ -20,5 +20,17 @@ module.exports = {
         res.sendStatus(200);
       })
       .catch(err => console.error(err));
+  },
+
+  deleteProperty: (req, res) => {
+    const db = req.app.get("db");
+    let {id} = req.params
+
+    db
+      .delete_property(id)
+      .then(() => {
+        res.sendStatus(200);
+      })
+      .catch(err => console.error(err));
   }
 };
