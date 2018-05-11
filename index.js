@@ -14,6 +14,7 @@ massive(CONNECTION_STRING).then(dbInstance => {
 })
 
 app.get('/api/properties', controller.getProperties)
+app.post('/api/properties', controller.addProperty)
 
 
 let port = SERVER_PORT || 3710
